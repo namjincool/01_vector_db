@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local caches and test artefacts
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# Credentials and private key material
+.secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
