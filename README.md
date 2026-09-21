@@ -54,3 +54,13 @@ terminal (or restart the app) afterwards. This makes TypeSafe available to futur
 Python processes without copying the key into each project; it does not configure other
 Windows accounts or remote deployments.
 
+## Chroma snapshot
+
+The repository includes the verified local Chroma snapshot under `data/chroma_db/`.
+It contains the `langent_knowledge` collection with 27 document chunks and
+384-dimensional `all-MiniLM-L6-v2` embeddings. Keep the repository private: the
+SQLite store and HNSW index are derived from private source material.
+
+To use the snapshot, run Langent from the repository root with its Chroma path set
+to `./data/chroma_db`. Re-index the source documents after changing the embedding
+model or the source corpus; do not mix embeddings produced by different models.
